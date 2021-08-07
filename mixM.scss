@@ -1,0 +1,84 @@
+@mixin menuitem{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@mixin Citate{
+    background-color: #f8f8f8;
+    text-align: left;
+    &__text{
+        font-family: "Roboto" ,sans-serif;
+        font-weight: 300;
+        font-style: italic;
+        color:#999;
+    }
+    &__box__text{
+        width: 770px;
+    }
+    &__sign{
+        font-family: 'Kaushan Script';
+        margin: 30px 0 0 70px;
+        position: relative;
+        &::before{
+            content: "";
+            width: 60px;
+            height: 3px;
+            background-color:#f38181;
+            position: absolute;
+            top: 50%;
+            left: -70px;
+        }
+    }
+    &__cont{
+        display: flex;
+        margin: 0 auto;
+        font-size: 24px;
+        align-items: center;
+    }
+}
+@mixin unline{
+    content: "";
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    background-color: #fff;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin headers {
+    &-first{
+        font-family: 'Kaushan Script';
+        font-size: 24px;
+        padding-top: 110px;
+    }
+    &-second{
+        font-size: 30px;
+        margin: 15px 0 95px;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+        &::after{
+            @include unline;
+            background-color: #f38181;
+        }
+    }
+}
+@mixin innerText {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    max-width: 955px;
+    margin: 0 auto;
+    color: #999;
+    margin-bottom: 95px;
+}
+@mixin NameLine {
+    &::before{
+        content: "";
+        width: 60px;
+        height: 3px;
+        background-color:#f38181;
+        position: absolute;
+        top: 35px;        
+    }
+}
